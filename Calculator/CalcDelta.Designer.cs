@@ -45,7 +45,7 @@ namespace CalcDelta
             // TbxVlrA
             // 
             this.TbxVlrA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrA.Location = new System.Drawing.Point(59, 28);
+            this.TbxVlrA.Location = new System.Drawing.Point(90, 32);
             this.TbxVlrA.Name = "TbxVlrA";
             this.TbxVlrA.Size = new System.Drawing.Size(36, 20);
             this.TbxVlrA.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace CalcDelta
             // TbxVlrB
             // 
             this.TbxVlrB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrB.Location = new System.Drawing.Point(59, 54);
+            this.TbxVlrB.Location = new System.Drawing.Point(90, 58);
             this.TbxVlrB.Name = "TbxVlrB";
             this.TbxVlrB.Size = new System.Drawing.Size(36, 20);
             this.TbxVlrB.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace CalcDelta
             // TbxVlrC
             // 
             this.TbxVlrC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrC.Location = new System.Drawing.Point(59, 80);
+            this.TbxVlrC.Location = new System.Drawing.Point(90, 84);
             this.TbxVlrC.Name = "TbxVlrC";
             this.TbxVlrC.Size = new System.Drawing.Size(36, 20);
             this.TbxVlrC.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace CalcDelta
             // 
             this.TbxResultado.BackColor = System.Drawing.SystemColors.Window;
             this.TbxResultado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxResultado.Location = new System.Drawing.Point(215, 54);
+            this.TbxResultado.Location = new System.Drawing.Point(215, 58);
             this.TbxResultado.Name = "TbxResultado";
             this.TbxResultado.ReadOnly = true;
             this.TbxResultado.Size = new System.Drawing.Size(40, 20);
@@ -103,7 +103,7 @@ namespace CalcDelta
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Location = new System.Drawing.Point(43, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace CalcDelta
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Location = new System.Drawing.Point(43, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -121,7 +121,7 @@ namespace CalcDelta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 57);
+            this.label3.Location = new System.Drawing.Point(43, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 8;
@@ -130,7 +130,7 @@ namespace CalcDelta
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(152, 57);
+            this.label4.Location = new System.Drawing.Point(152, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 9;
