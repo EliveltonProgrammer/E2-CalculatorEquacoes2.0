@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CalcDelta
+namespace CalcEquacao
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CalcDelta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCalcDelta());
+            Application.Run(new FrmCalc());
         }
     }
 }
