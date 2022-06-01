@@ -53,9 +53,9 @@ namespace CalcEquacao
                 }
                 else
                 {
-                    TbxVlrDelta.Text = "";
-                    TbxVlrX1.Text = "";
-                    TbxVlrX2.Text = "";
+                    TbxVlrDelta.Text = ""; TbxVlrX1.Text = ""; TbxVlrX2.Text = "";
+                    TbxPtoMinX.Text = ""; TbxPtoMinY.Text = ""; TbxPtoMaxX.Text = ""; 
+                    TbxPtoMaxY.Text = "";
 
                     vlrA = Convert.ToDouble(TbxVlrA.Text);
                     vlrB = Convert.ToDouble(TbxVlrB.Text);
@@ -123,20 +123,24 @@ namespace CalcEquacao
                         lbinfRaiz.Text = "Há 2 Raízes Reais";
                         lbinfParab.Text = "Se A > 0: Parabola Voltada para Cima";
                         lbInfPtoVertice.Text = "Possue Vértice em Ponto Minímo";
-                        lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (" + ptoMinX + ";" + ptoMinY + ")";
+                        lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (x=" + ptoMinX + ";y=" + ptoMinY + ")";
                     }
                     else if (delta < 0)
                     {
                         lbinfRaiz.Text = "Não há Raízes Reais";
-                        lbinfParab.Text = "Parabola Inexistênte";
-                        lbInfPtoVertice.Text = "Ponto Minímo e Máximo Inexistênte";
+                        lbinfParab.Text = "Parabola Inexistente";
+                        lbInfPtoVertice.Text = "Ponto Minímo e Máximo Inexistente";
                         lbinfCoordVertice.Text = "Coordenadas dos Vértices Inexistentes";
+                        TbxVlrX1.Text = "Inexistente";
+                        TbxVlrX2.Text = "Inexistente";
+                        TbxPtoMinX.Text = "Inexistente";
+                        TbxPtoMinY.Text = "Inexistente";
                     }
                     if (vlrA < 0)
                     {
                         lbinfParab.Text = "Se A < 0: Parabola Voltada para Baixo";
                         lbInfPtoVertice.Text = "Possue Vértice em Ponto Máximo";
-                        lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (" + ptoMaxX + ";" + ptoMaxY + ")";
+                        lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (x=" + ptoMaxX + ";y=" + ptoMaxY + ")";
                     }
 
                     lbinfEquac.Visible = true;
@@ -152,6 +156,9 @@ namespace CalcEquacao
 
                     if (vlrB <= 0 && vlrC <= 0)
                         lbinfEquac.Text = vlrA + "x² " + vlrB + "x " + vlrC + " = 0";
+
+                    if (vlrA >= 0 && vlrB >= 0 && vlrC >= 0)
+                        lbinfEquac.Text = vlrA + "x² + " + vlrB + "x + " + vlrC + " = 0";
                     {
 
                     }
