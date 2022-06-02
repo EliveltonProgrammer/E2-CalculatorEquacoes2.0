@@ -44,6 +44,10 @@ namespace CalcEquacao
             this.cbxTpEquac = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TbxVlrX2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TbxVlrX1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.TbxPtoMaxY = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -52,24 +56,28 @@ namespace CalcEquacao
             this.TbxPtoMinY = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TbxPtoMinX = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TbxVlrX2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TbxVlrX1 = new System.Windows.Forms.TextBox();
             this.groupInfRaiz = new System.Windows.Forms.GroupBox();
+            this.lbStatusInf = new System.Windows.Forms.Label();
             this.lbinfCoordVertice = new System.Windows.Forms.Label();
             this.lbInfPtoVertice = new System.Windows.Forms.Label();
             this.lbinfParab = new System.Windows.Forms.Label();
             this.groupInfEquac = new System.Windows.Forms.GroupBox();
+            this.lbStatusEquac = new System.Windows.Forms.Label();
             this.toolTipInicio = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFormula = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnZerar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panelAutExport = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.Data = new System.Windows.Forms.Label();
             this.LbData = new System.Windows.Forms.Label();
             this.LbHorario = new System.Windows.Forms.Label();
@@ -78,6 +86,7 @@ namespace CalcEquacao
             this.groupBox2.SuspendLayout();
             this.groupInfRaiz.SuspendLayout();
             this.groupInfEquac.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panelAutExport.SuspendLayout();
             this.SuspendLayout();
@@ -86,48 +95,51 @@ namespace CalcEquacao
             // 
             this.TbxVlrA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbxVlrA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrA.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrA.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TbxVlrA.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrA.ForeColor = System.Drawing.Color.Blue;
             this.TbxVlrA.Location = new System.Drawing.Point(21, 37);
             this.TbxVlrA.Name = "TbxVlrA";
-            this.TbxVlrA.Size = new System.Drawing.Size(36, 20);
-            this.TbxVlrA.TabIndex = 2;
+            this.TbxVlrA.Size = new System.Drawing.Size(36, 23);
+            this.TbxVlrA.TabIndex = 1;
             this.TbxVlrA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbxVlrA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxVlrA_KeyPress);
             // 
             // TbxVlrB
             // 
             this.TbxVlrB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbxVlrB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrB.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrB.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TbxVlrB.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrB.ForeColor = System.Drawing.Color.Blue;
             this.TbxVlrB.Location = new System.Drawing.Point(63, 37);
             this.TbxVlrB.Name = "TbxVlrB";
-            this.TbxVlrB.Size = new System.Drawing.Size(36, 20);
-            this.TbxVlrB.TabIndex = 3;
+            this.TbxVlrB.Size = new System.Drawing.Size(36, 23);
+            this.TbxVlrB.TabIndex = 2;
             this.TbxVlrB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbxVlrB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxVlrB_KeyPress);
             // 
             // TbxVlrC
             // 
             this.TbxVlrC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbxVlrC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TbxVlrC.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrC.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TbxVlrC.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrC.ForeColor = System.Drawing.Color.Blue;
             this.TbxVlrC.Location = new System.Drawing.Point(105, 37);
             this.TbxVlrC.Name = "TbxVlrC";
-            this.TbxVlrC.Size = new System.Drawing.Size(36, 20);
-            this.TbxVlrC.TabIndex = 4;
+            this.TbxVlrC.Size = new System.Drawing.Size(36, 23);
+            this.TbxVlrC.TabIndex = 3;
             this.TbxVlrC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbxVlrC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxVlrC_KeyPress);
             // 
             // TbxVlrDelta
             // 
             this.TbxVlrDelta.BackColor = System.Drawing.SystemColors.Window;
             this.TbxVlrDelta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxVlrDelta.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrDelta.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxVlrDelta.Location = new System.Drawing.Point(12, 58);
+            this.TbxVlrDelta.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrDelta.ForeColor = System.Drawing.Color.Blue;
+            this.TbxVlrDelta.Location = new System.Drawing.Point(7, 65);
             this.TbxVlrDelta.Name = "TbxVlrDelta";
             this.TbxVlrDelta.ReadOnly = true;
-            this.TbxVlrDelta.Size = new System.Drawing.Size(69, 20);
+            this.TbxVlrDelta.Size = new System.Drawing.Size(64, 23);
             this.TbxVlrDelta.TabIndex = 3;
             this.TbxVlrDelta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,7 +181,7 @@ namespace CalcEquacao
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(26, 41);
+            this.label4.Location = new System.Drawing.Point(16, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 9;
@@ -178,22 +190,22 @@ namespace CalcEquacao
             // lbinfRaiz
             // 
             this.lbinfRaiz.AutoSize = true;
-            this.lbinfRaiz.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinfRaiz.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinfRaiz.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbinfRaiz.Location = new System.Drawing.Point(3, 22);
+            this.lbinfRaiz.Location = new System.Drawing.Point(2, 25);
             this.lbinfRaiz.Name = "lbinfRaiz";
-            this.lbinfRaiz.Size = new System.Drawing.Size(46, 16);
+            this.lbinfRaiz.Size = new System.Drawing.Size(52, 16);
             this.lbinfRaiz.TabIndex = 10;
             this.lbinfRaiz.Text = "&&infRaiz";
             // 
             // lbinfEquac
             // 
             this.lbinfEquac.AutoSize = true;
-            this.lbinfEquac.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinfEquac.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinfEquac.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbinfEquac.Location = new System.Drawing.Point(48, 22);
+            this.lbinfEquac.Location = new System.Drawing.Point(43, 22);
             this.lbinfEquac.Name = "lbinfEquac";
-            this.lbinfEquac.Size = new System.Drawing.Size(73, 22);
+            this.lbinfEquac.Size = new System.Drawing.Size(81, 22);
             this.lbinfEquac.TabIndex = 11;
             this.lbinfEquac.Text = "&&infEquac";
             // 
@@ -205,10 +217,10 @@ namespace CalcEquacao
             this.cbxTpEquac.Items.AddRange(new object[] {
             "Equação do 1º Grau",
             "Equação do 2º Grau"});
-            this.cbxTpEquac.Location = new System.Drawing.Point(30, 29);
+            this.cbxTpEquac.Location = new System.Drawing.Point(26, 26);
             this.cbxTpEquac.MaxDropDownItems = 2;
             this.cbxTpEquac.Name = "cbxTpEquac";
-            this.cbxTpEquac.Size = new System.Drawing.Size(130, 22);
+            this.cbxTpEquac.Size = new System.Drawing.Size(126, 22);
             this.cbxTpEquac.TabIndex = 1;
             this.toolTipInicio.SetToolTip(this.cbxTpEquac, "Determine o Tipo de sua Equação");
             // 
@@ -225,21 +237,13 @@ namespace CalcEquacao
             this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(170, 66);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Coeficientes da Equação";
             this.toolTipInicio.SetToolTip(this.groupBox1, "Determine os Valores de sua Equação do 2º Grau");
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.TbxPtoMaxY);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.TbxPtoMaxX);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.TbxPtoMinY);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.TbxPtoMinX);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.TbxVlrX2);
             this.groupBox2.Controls.Add(this.label5);
@@ -250,129 +254,33 @@ namespace CalcEquacao
             this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox2.Location = new System.Drawing.Point(12, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(193, 216);
+            this.groupBox2.Size = new System.Drawing.Size(199, 127);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Resultados";
+            this.groupBox2.Text = "Valores das Raízes";
             this.toolTipInicio.SetToolTip(this.groupBox2, "Resultados calculados de sua Equação");
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label10.Location = new System.Drawing.Point(85, 167);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 15);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Máxímo Vértice (y):";
-            // 
-            // TbxPtoMaxY
-            // 
-            this.TbxPtoMaxY.BackColor = System.Drawing.SystemColors.Window;
-            this.TbxPtoMaxY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxPtoMaxY.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxPtoMaxY.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxPtoMaxY.Location = new System.Drawing.Point(101, 184);
-            this.TbxPtoMaxY.Name = "TbxPtoMaxY";
-            this.TbxPtoMaxY.ReadOnly = true;
-            this.TbxPtoMaxY.Size = new System.Drawing.Size(69, 20);
-            this.TbxPtoMaxY.TabIndex = 20;
-            this.TbxPtoMaxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label11.Location = new System.Drawing.Point(85, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Máximo Vértice (x):";
-            // 
-            // TbxPtoMaxX
-            // 
-            this.TbxPtoMaxX.BackColor = System.Drawing.SystemColors.Window;
-            this.TbxPtoMaxX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxPtoMaxX.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxPtoMaxX.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxPtoMaxX.Location = new System.Drawing.Point(101, 135);
-            this.TbxPtoMaxX.Name = "TbxPtoMaxX";
-            this.TbxPtoMaxX.ReadOnly = true;
-            this.TbxPtoMaxX.Size = new System.Drawing.Size(69, 20);
-            this.TbxPtoMaxX.TabIndex = 18;
-            this.TbxPtoMaxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label7.Location = new System.Drawing.Point(87, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 15);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Minímo Vértice (y):";
-            // 
-            // TbxPtoMinY
-            // 
-            this.TbxPtoMinY.BackColor = System.Drawing.SystemColors.Window;
-            this.TbxPtoMinY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxPtoMinY.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxPtoMinY.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxPtoMinY.Location = new System.Drawing.Point(101, 89);
-            this.TbxPtoMinY.Name = "TbxPtoMinY";
-            this.TbxPtoMinY.ReadOnly = true;
-            this.TbxPtoMinY.Size = new System.Drawing.Size(69, 20);
-            this.TbxPtoMinY.TabIndex = 16;
-            this.TbxPtoMinY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label8.Location = new System.Drawing.Point(87, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 15);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Minímo Vértice (x):";
-            // 
-            // TbxPtoMinX
-            // 
-            this.TbxPtoMinX.BackColor = System.Drawing.SystemColors.Window;
-            this.TbxPtoMinX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxPtoMinX.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxPtoMinX.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxPtoMinX.Location = new System.Drawing.Point(101, 40);
-            this.TbxPtoMinX.Name = "TbxPtoMinX";
-            this.TbxPtoMinX.ReadOnly = true;
-            this.TbxPtoMinX.Size = new System.Drawing.Size(69, 20);
-            this.TbxPtoMinX.TabIndex = 14;
-            this.TbxPtoMinX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label6.Location = new System.Drawing.Point(26, 139);
+            this.label6.Location = new System.Drawing.Point(120, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
+            this.label6.Size = new System.Drawing.Size(24, 15);
             this.label6.TabIndex = 13;
-            this.label6.Text = "x2 (y):";
+            this.label6.Text = "x ||:";
             // 
             // TbxVlrX2
             // 
             this.TbxVlrX2.BackColor = System.Drawing.SystemColors.Window;
             this.TbxVlrX2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxVlrX2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrX2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxVlrX2.Location = new System.Drawing.Point(12, 156);
+            this.TbxVlrX2.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrX2.ForeColor = System.Drawing.Color.Blue;
+            this.TbxVlrX2.Location = new System.Drawing.Point(99, 88);
             this.TbxVlrX2.Name = "TbxVlrX2";
             this.TbxVlrX2.ReadOnly = true;
-            this.TbxVlrX2.Size = new System.Drawing.Size(69, 20);
+            this.TbxVlrX2.Size = new System.Drawing.Size(64, 23);
             this.TbxVlrX2.TabIndex = 12;
             this.TbxVlrX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -381,80 +289,189 @@ namespace CalcEquacao
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label5.Location = new System.Drawing.Point(28, 90);
+            this.label5.Location = new System.Drawing.Point(120, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(21, 15);
             this.label5.TabIndex = 11;
-            this.label5.Text = "x1 (x):";
+            this.label5.Text = "x |:";
             // 
             // TbxVlrX1
             // 
             this.TbxVlrX1.BackColor = System.Drawing.SystemColors.Window;
             this.TbxVlrX1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbxVlrX1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxVlrX1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TbxVlrX1.Location = new System.Drawing.Point(12, 107);
+            this.TbxVlrX1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxVlrX1.ForeColor = System.Drawing.Color.Blue;
+            this.TbxVlrX1.Location = new System.Drawing.Point(100, 40);
             this.TbxVlrX1.Name = "TbxVlrX1";
             this.TbxVlrX1.ReadOnly = true;
-            this.TbxVlrX1.Size = new System.Drawing.Size(69, 20);
+            this.TbxVlrX1.Size = new System.Drawing.Size(64, 23);
             this.TbxVlrX1.TabIndex = 10;
             this.TbxVlrX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label10.Location = new System.Drawing.Point(52, 179);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 15);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Vértice Máxímo";
+            // 
+            // TbxPtoMaxY
+            // 
+            this.TbxPtoMaxY.BackColor = System.Drawing.SystemColors.Window;
+            this.TbxPtoMaxY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbxPtoMaxY.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxPtoMaxY.ForeColor = System.Drawing.Color.Blue;
+            this.TbxPtoMaxY.Location = new System.Drawing.Point(65, 196);
+            this.TbxPtoMaxY.Name = "TbxPtoMaxY";
+            this.TbxPtoMaxY.ReadOnly = true;
+            this.TbxPtoMaxY.Size = new System.Drawing.Size(64, 23);
+            this.TbxPtoMaxY.TabIndex = 20;
+            this.TbxPtoMaxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label11.Location = new System.Drawing.Point(52, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Vértice Máxímo";
+            // 
+            // TbxPtoMaxX
+            // 
+            this.TbxPtoMaxX.BackColor = System.Drawing.SystemColors.Window;
+            this.TbxPtoMaxX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbxPtoMaxX.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxPtoMaxX.ForeColor = System.Drawing.Color.Blue;
+            this.TbxPtoMaxX.Location = new System.Drawing.Point(65, 149);
+            this.TbxPtoMaxX.Name = "TbxPtoMaxX";
+            this.TbxPtoMaxX.ReadOnly = true;
+            this.TbxPtoMaxX.Size = new System.Drawing.Size(64, 23);
+            this.TbxPtoMaxX.TabIndex = 18;
+            this.TbxPtoMaxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label7.Location = new System.Drawing.Point(52, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 15);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Vértice Minímo";
+            // 
+            // TbxPtoMinY
+            // 
+            this.TbxPtoMinY.BackColor = System.Drawing.SystemColors.Window;
+            this.TbxPtoMinY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbxPtoMinY.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxPtoMinY.ForeColor = System.Drawing.Color.Blue;
+            this.TbxPtoMinY.Location = new System.Drawing.Point(65, 92);
+            this.TbxPtoMinY.Name = "TbxPtoMinY";
+            this.TbxPtoMinY.ReadOnly = true;
+            this.TbxPtoMinY.Size = new System.Drawing.Size(64, 23);
+            this.TbxPtoMinY.TabIndex = 16;
+            this.TbxPtoMinY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label8.Location = new System.Drawing.Point(52, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 15);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Vértice Minímo";
+            // 
+            // TbxPtoMinX
+            // 
+            this.TbxPtoMinX.BackColor = System.Drawing.SystemColors.Window;
+            this.TbxPtoMinX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbxPtoMinX.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TbxPtoMinX.ForeColor = System.Drawing.Color.Blue;
+            this.TbxPtoMinX.Location = new System.Drawing.Point(65, 44);
+            this.TbxPtoMinX.Name = "TbxPtoMinX";
+            this.TbxPtoMinX.ReadOnly = true;
+            this.TbxPtoMinX.Size = new System.Drawing.Size(64, 23);
+            this.TbxPtoMinX.TabIndex = 14;
+            this.TbxPtoMinX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // groupInfRaiz
             // 
+            this.groupInfRaiz.Controls.Add(this.lbStatusInf);
             this.groupInfRaiz.Controls.Add(this.lbinfCoordVertice);
             this.groupInfRaiz.Controls.Add(this.lbInfPtoVertice);
             this.groupInfRaiz.Controls.Add(this.lbinfParab);
             this.groupInfRaiz.Controls.Add(this.lbinfRaiz);
             this.groupInfRaiz.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.groupInfRaiz.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupInfRaiz.Location = new System.Drawing.Point(216, 133);
+            this.groupInfRaiz.Location = new System.Drawing.Point(214, 133);
             this.groupInfRaiz.Name = "groupInfRaiz";
-            this.groupInfRaiz.Size = new System.Drawing.Size(265, 127);
+            this.groupInfRaiz.Size = new System.Drawing.Size(268, 127);
             this.groupInfRaiz.TabIndex = 15;
             this.groupInfRaiz.TabStop = false;
             this.groupInfRaiz.Text = "Informações Equacionárias";
             this.toolTipInicio.SetToolTip(this.groupInfRaiz, "Informativo de suas Raízes");
             // 
+            // lbStatusInf
+            // 
+            this.lbStatusInf.AutoSize = true;
+            this.lbStatusInf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatusInf.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbStatusInf.Location = new System.Drawing.Point(47, 57);
+            this.lbStatusInf.Name = "lbStatusInf";
+            this.lbStatusInf.Size = new System.Drawing.Size(54, 16);
+            this.lbStatusInf.TabIndex = 13;
+            this.lbStatusInf.Text = "&&StatusInf";
+            // 
             // lbinfCoordVertice
             // 
             this.lbinfCoordVertice.AutoSize = true;
-            this.lbinfCoordVertice.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinfCoordVertice.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinfCoordVertice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbinfCoordVertice.Location = new System.Drawing.Point(3, 82);
+            this.lbinfCoordVertice.Location = new System.Drawing.Point(2, 85);
             this.lbinfCoordVertice.Name = "lbinfCoordVertice";
-            this.lbinfCoordVertice.Size = new System.Drawing.Size(87, 16);
+            this.lbinfCoordVertice.Size = new System.Drawing.Size(99, 16);
             this.lbinfCoordVertice.TabIndex = 13;
             this.lbinfCoordVertice.Text = "&&infCoordVertice";
             // 
             // lbInfPtoVertice
             // 
             this.lbInfPtoVertice.AutoSize = true;
-            this.lbInfPtoVertice.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfPtoVertice.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfPtoVertice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbInfPtoVertice.Location = new System.Drawing.Point(3, 62);
+            this.lbInfPtoVertice.Location = new System.Drawing.Point(2, 65);
             this.lbInfPtoVertice.Name = "lbInfPtoVertice";
-            this.lbInfPtoVertice.Size = new System.Drawing.Size(72, 16);
+            this.lbInfPtoVertice.Size = new System.Drawing.Size(84, 16);
             this.lbInfPtoVertice.TabIndex = 12;
             this.lbInfPtoVertice.Text = "&&infPtoVertice";
             // 
             // lbinfParab
             // 
             this.lbinfParab.AutoSize = true;
-            this.lbinfParab.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinfParab.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinfParab.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbinfParab.Location = new System.Drawing.Point(3, 42);
+            this.lbinfParab.Location = new System.Drawing.Point(2, 45);
             this.lbinfParab.Name = "lbinfParab";
-            this.lbinfParab.Size = new System.Drawing.Size(54, 16);
+            this.lbinfParab.Size = new System.Drawing.Size(60, 16);
             this.lbinfParab.TabIndex = 11;
             this.lbinfParab.Text = "&&infParab";
             // 
             // groupInfEquac
             // 
+            this.groupInfEquac.Controls.Add(this.lbStatusEquac);
             this.groupInfEquac.Controls.Add(this.lbinfEquac);
             this.groupInfEquac.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.groupInfEquac.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupInfEquac.Location = new System.Drawing.Point(255, 268);
+            this.groupInfEquac.Location = new System.Drawing.Point(255, 281);
             this.groupInfEquac.Name = "groupInfEquac";
             this.groupInfEquac.Size = new System.Drawing.Size(196, 53);
             this.groupInfEquac.TabIndex = 16;
@@ -462,18 +479,73 @@ namespace CalcEquacao
             this.groupInfEquac.Text = "Equação";
             this.toolTipInicio.SetToolTip(this.groupInfEquac, "Informativo de sua Equação");
             // 
+            // lbStatusEquac
+            // 
+            this.lbStatusEquac.AutoSize = true;
+            this.lbStatusEquac.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatusEquac.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbStatusEquac.Location = new System.Drawing.Point(8, 25);
+            this.lbStatusEquac.Name = "lbStatusEquac";
+            this.lbStatusEquac.Size = new System.Drawing.Size(73, 16);
+            this.lbStatusEquac.TabIndex = 12;
+            this.lbStatusEquac.Text = "&&StatusEquac";
+            // 
+            // btnFormula
+            // 
+            this.btnFormula.BackgroundImage = global::Calculator.Properties.Resources.Formula;
+            this.btnFormula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFormula.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFormula.Location = new System.Drawing.Point(301, 423);
+            this.btnFormula.Name = "btnFormula";
+            this.btnFormula.Size = new System.Drawing.Size(48, 48);
+            this.btnFormula.TabIndex = 3;
+            this.btnFormula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipInicio.SetToolTip(this.btnFormula, "Imprimir a Formula Explicativa");
+            this.btnFormula.UseVisualStyleBackColor = true;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(441, 8);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
+            this.btnMinimizar.TabIndex = 85;
+            this.toolTipInicio.SetToolTip(this.btnMinimizar, "Minimizar");
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(468, 10);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(12, 12);
+            this.btnFechar.TabIndex = 86;
+            this.toolTipInicio.SetToolTip(this.btnFechar, "Sair");
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // btnSair
             // 
             this.btnSair.BackgroundImage = global::Calculator.Properties.Resources.Sair;
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSair.Font = new System.Drawing.Font("Arial", 8.25F);
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(347, 340);
+            this.btnSair.Location = new System.Drawing.Point(409, 423);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(38, 38);
-            this.btnSair.TabIndex = 17;
+            this.btnSair.Size = new System.Drawing.Size(48, 48);
+            this.btnSair.TabIndex = 5;
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTipInicio.SetToolTip(this.btnSair, "Sair do Programa");
+            this.toolTipInicio.SetToolTip(this.btnSair, "Sair");
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -483,12 +555,12 @@ namespace CalcEquacao
             this.btnZerar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnZerar.Font = new System.Drawing.Font("Arial", 8.25F);
             this.btnZerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZerar.Location = new System.Drawing.Point(303, 340);
+            this.btnZerar.Location = new System.Drawing.Point(355, 423);
             this.btnZerar.Name = "btnZerar";
-            this.btnZerar.Size = new System.Drawing.Size(38, 38);
+            this.btnZerar.Size = new System.Drawing.Size(48, 48);
             this.btnZerar.TabIndex = 4;
             this.btnZerar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTipInicio.SetToolTip(this.btnZerar, "Zerar calculo");
+            this.toolTipInicio.SetToolTip(this.btnZerar, "Zerar valores");
             this.btnZerar.UseVisualStyleBackColor = true;
             this.btnZerar.Click += new System.EventHandler(this.btnZerar_Click);
             // 
@@ -498,26 +570,94 @@ namespace CalcEquacao
             this.btnCalcular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCalcular.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalcular.Location = new System.Drawing.Point(259, 340);
+            this.btnCalcular.Location = new System.Drawing.Point(247, 423);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(38, 38);
-            this.btnCalcular.TabIndex = 3;
+            this.btnCalcular.Size = new System.Drawing.Size(48, 48);
+            this.btnCalcular.TabIndex = 2;
             this.btnCalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTipInicio.SetToolTip(this.btnCalcular, "Calcular");
+            this.toolTipInicio.SetToolTip(this.btnCalcular, "Calcular Equação");
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.TbxPtoMaxY);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.TbxPtoMinX);
+            this.groupBox3.Controls.Add(this.TbxPtoMaxX);
+            this.groupBox3.Controls.Add(this.TbxPtoMinY);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox3.Location = new System.Drawing.Point(12, 268);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(209, 229);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pontos de Coordenadas Vértice";
+            this.toolTipInicio.SetToolTip(this.groupBox3, "Resultados calculados de sua Equação");
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label15.Location = new System.Drawing.Point(33, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "(y):";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label14.Location = new System.Drawing.Point(33, 93);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 15);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "(y):";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label13.Location = new System.Drawing.Point(33, 150);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 15);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "(x):";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label12.Location = new System.Drawing.Point(33, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 15);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "(x):";
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.cbxTpEquac);
             this.groupBox5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox5.Location = new System.Drawing.Point(291, 50);
+            this.groupBox5.Location = new System.Drawing.Point(289, 50);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(190, 66);
-            this.groupBox5.TabIndex = 1;
+            this.groupBox5.Size = new System.Drawing.Size(168, 60);
+            this.groupBox5.TabIndex = 99;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tipo da Equação";
+            this.groupBox5.Text = "Formato da Equação";
             // 
             // panelAutExport
             // 
@@ -533,20 +673,6 @@ namespace CalcEquacao
             this.panelAutExport.Size = new System.Drawing.Size(490, 34);
             this.panelAutExport.TabIndex = 85;
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(441, 8);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
-            this.btnMinimizar.TabIndex = 85;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -557,20 +683,6 @@ namespace CalcEquacao
             this.label9.Size = new System.Drawing.Size(38, 12);
             this.label9.TabIndex = 42;
             this.label9.Text = "Horário:";
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(468, 10);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(12, 12);
-            this.btnFechar.TabIndex = 86;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // Data
             // 
@@ -616,7 +728,9 @@ namespace CalcEquacao
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(488, 396);
+            this.ClientSize = new System.Drawing.Size(488, 509);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnFormula);
             this.Controls.Add(this.panelAutExport);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox5);
@@ -628,6 +742,7 @@ namespace CalcEquacao
             this.Controls.Add(this.btnCalcular);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCalc";
@@ -641,6 +756,8 @@ namespace CalcEquacao
             this.groupInfRaiz.PerformLayout();
             this.groupInfEquac.ResumeLayout(false);
             this.groupInfEquac.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.panelAutExport.ResumeLayout(false);
             this.panelAutExport.PerformLayout();
@@ -693,6 +810,14 @@ namespace CalcEquacao
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TbxPtoMaxX;
         private System.Windows.Forms.Label lbinfCoordVertice;
+        private System.Windows.Forms.Button btnFormula;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbStatusInf;
+        private System.Windows.Forms.Label lbStatusEquac;
     }
 }
 

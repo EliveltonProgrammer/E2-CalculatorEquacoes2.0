@@ -12,25 +12,114 @@ namespace CalcEquacao
 {
     public partial class FrmCalc : Form
     {
-        double vlrA = 0, vlrB = 0, vlrC = 0, delta = 0, x1 = 0, x2 = 0, ptoMinX = 0, ptoMinY = 0, ptoMaxX = 0, ptoMaxY = 0;
-
+        double vlrA = 0, vlrB = 0, vlrC = 0, delta = 0, x1 = 0, x2 = 0, ptoMinX = 0, ptoMinY = 0, ptoMaxX = 0, ptoMaxY = 0;     
         public FrmCalc()
         {
             InitializeComponent();
             LbData.Text = DateTime.Now.ToString("dd/MM/yyyy");
             cbxTpEquac.SelectedIndex = 1;
-            lbinfRaiz.Visible = false;
-            lbinfEquac.Visible = false;
-            lbinfParab.Visible = false;
-            lbInfPtoVertice.Visible = false;
-            lbinfCoordVertice.Visible = false;
+            CalculoDesabilitado();
         }
 
         private void timerInicio_Tick(object sender, EventArgs e)
         {
             LbHorario.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+        private void CalculoHabilitado()
+        {
+            TbxVlrDelta.Text = ""; TbxVlrX1.Text = ""; TbxVlrX2.Text = "";
+            TbxPtoMinX.Text = ""; TbxPtoMinY.Text = ""; TbxPtoMaxX.Text = "";
+            TbxPtoMaxY.Text = "";
 
+            lbStatusInf.Visible = false;
+            lbStatusEquac.Visible = false;
+
+            lbinfRaiz.Visible = true;
+            lbinfEquac.Visible = true;
+            lbinfParab.Visible = true;
+            lbInfPtoVertice.Visible = true;
+            lbinfCoordVertice.Visible = true;
+
+            TbxVlrDelta.Enabled = true;
+            TbxVlrX1.Enabled = true;
+            TbxVlrX2.Enabled = true;
+
+            TbxPtoMinX.Enabled = true;
+            TbxPtoMinY.Enabled = true;
+            TbxPtoMaxX.Enabled = true;
+            TbxPtoMaxY.Enabled = true;
+        }
+
+        private void CalculoDesabilitado()
+        {
+            lbStatusInf.Visible = true;
+            lbStatusInf.Text = "Sem Informações até o Momento";
+            lbStatusEquac.Visible = true;
+            lbStatusEquac.Text = "Estrutura da Equação não Digitada";
+
+            lbinfRaiz.Visible = false;
+            lbinfEquac.Visible = false;
+            lbinfParab.Visible = false;
+            lbInfPtoVertice.Visible = false;
+            lbinfCoordVertice.Visible = false;
+
+            TbxVlrDelta.Enabled = false;
+            TbxVlrX1.Enabled = false;
+            TbxVlrX2.Enabled = false;
+
+            TbxPtoMinX.Enabled = false;
+            TbxPtoMinY.Enabled = false;
+            TbxPtoMaxX.Enabled = false;
+            TbxPtoMaxY.Enabled = false;
+        }
+
+        private void TbxVlrA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void TbxVlrB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void TbxVlrC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+        }
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -53,9 +142,8 @@ namespace CalcEquacao
                 }
                 else
                 {
-                    TbxVlrDelta.Text = ""; TbxVlrX1.Text = ""; TbxVlrX2.Text = "";
-                    TbxPtoMinX.Text = ""; TbxPtoMinY.Text = ""; TbxPtoMaxX.Text = ""; 
-                    TbxPtoMaxY.Text = "";
+
+                    CalculoHabilitado();
 
                     vlrA = Convert.ToDouble(TbxVlrA.Text);
                     vlrB = Convert.ToDouble(TbxVlrB.Text);
@@ -108,14 +196,11 @@ namespace CalcEquacao
                         TbxVlrA.Text = Convert.ToString(vlrA);
                     }
 
-                    lbinfRaiz.Visible = true;
-                    lbinfParab.Visible = true;
-                    lbInfPtoVertice.Visible = true;
-                    lbinfCoordVertice.Visible = true;
-
                     if (delta == 0)
                     {
                         lbinfRaiz.Text = "Há 1 Raíz Real";
+                        lbinfParab.Text = "Parabola Voltada para Baixo";
+                        lbInfPtoVertice.Text = "Possue Vértice em Ponto Minímo = 0";
                         lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (x=0;y=0)";
                     }
                     else if (delta > 0 && vlrA > 0)
@@ -142,8 +227,6 @@ namespace CalcEquacao
                         lbInfPtoVertice.Text = "Possue Vértice em Ponto Máximo";
                         lbinfCoordVertice.Text = "As Coordenadas do Vértice são: (x=" + ptoMaxX + ";y=" + ptoMaxY + ")";
                     }
-
-                    lbinfEquac.Visible = true;
 
                     if (vlrB >= 0 && vlrC >= 0)
                         lbinfEquac.Text = vlrA + "x² + " + vlrB + "x + " + vlrC + " = 0";
@@ -181,17 +264,10 @@ namespace CalcEquacao
             TbxPtoMinX.Text = ""; TbxPtoMinY.Text = ""; TbxPtoMaxX.Text = ""; TbxPtoMaxY.Text = "";
 
             //Componentes Informativos
-            lbinfRaiz.Text = "";
-            lbinfParab.Text = "";
-            lbInfPtoVertice.Text = "";
-            lbinfCoordVertice.Text = "";
-            lbinfEquac.Text = "";
+            lbinfRaiz.Text = ""; lbinfParab.Text = ""; lbInfPtoVertice.Text = "";
+            lbinfCoordVertice.Text = ""; lbinfEquac.Text = "";
 
-            lbinfRaiz.Visible = false;
-            lbinfParab.Visible = false;
-            lbInfPtoVertice.Visible = false;
-            lbinfCoordVertice.Visible = false;
-            lbinfEquac.Visible = false;
+            CalculoDesabilitado();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -200,6 +276,7 @@ namespace CalcEquacao
         }
         private void btnZerar_Click(object sender, EventArgs e)
         {
+            CalculoDesabilitado();
             ZerarCalculo();
         }
         private void btnSair_Click(object sender, EventArgs e)
