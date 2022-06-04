@@ -64,17 +64,17 @@ namespace CalcEquacao
             this.groupInfEquac = new System.Windows.Forms.GroupBox();
             this.lbStatusEquac = new System.Windows.Forms.Label();
             this.toolTipInicio = new System.Windows.Forms.ToolTip(this.components);
-            this.btnFormula = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.btnZerar = new System.Windows.Forms.Button();
-            this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnImprFormula = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnZerar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panelAutExport = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -82,6 +82,9 @@ namespace CalcEquacao
             this.LbData = new System.Windows.Forms.Label();
             this.LbHorario = new System.Windows.Forms.Label();
             this.timerInicio = new System.Windows.Forms.Timer(this.components);
+            this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupInfRaiz.SuspendLayout();
@@ -490,19 +493,88 @@ namespace CalcEquacao
             this.lbStatusEquac.TabIndex = 12;
             this.lbStatusEquac.Text = "&&StatusEquac";
             // 
-            // btnFormula
+            // groupBox3
             // 
-            this.btnFormula.BackgroundImage = global::Calculator.Properties.Resources.Formula;
-            this.btnFormula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFormula.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormula.Location = new System.Drawing.Point(301, 423);
-            this.btnFormula.Name = "btnFormula";
-            this.btnFormula.Size = new System.Drawing.Size(48, 48);
-            this.btnFormula.TabIndex = 3;
-            this.btnFormula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTipInicio.SetToolTip(this.btnFormula, "Imprimir a Formula Explicativa");
-            this.btnFormula.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.TbxPtoMaxY);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.TbxPtoMinX);
+            this.groupBox3.Controls.Add(this.TbxPtoMaxX);
+            this.groupBox3.Controls.Add(this.TbxPtoMinY);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox3.Location = new System.Drawing.Point(12, 268);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(209, 229);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pontos de Coordenadas Vértice";
+            this.toolTipInicio.SetToolTip(this.groupBox3, "Resultados calculados de sua Equação");
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label15.Location = new System.Drawing.Point(33, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "(y):";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label14.Location = new System.Drawing.Point(33, 93);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 15);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "(y):";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label13.Location = new System.Drawing.Point(33, 150);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 15);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "(x):";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label12.Location = new System.Drawing.Point(33, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 15);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "(x):";
+            // 
+            // btnImprFormula
+            // 
+            this.btnImprFormula.BackgroundImage = global::Calculator.Properties.Resources.Formula;
+            this.btnImprFormula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImprFormula.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprFormula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprFormula.Location = new System.Drawing.Point(301, 423);
+            this.btnImprFormula.Name = "btnImprFormula";
+            this.btnImprFormula.Size = new System.Drawing.Size(48, 48);
+            this.btnImprFormula.TabIndex = 3;
+            this.btnImprFormula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipInicio.SetToolTip(this.btnImprFormula, "Imprimir a Formula Explicativa");
+            this.btnImprFormula.UseVisualStyleBackColor = true;
+            this.btnImprFormula.Click += new System.EventHandler(this.btnImprFormula_Click);
             // 
             // btnMinimizar
             // 
@@ -578,74 +650,6 @@ namespace CalcEquacao
             this.toolTipInicio.SetToolTip(this.btnCalcular, "Calcular Equação");
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.TbxPtoMaxY);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.TbxPtoMinX);
-            this.groupBox3.Controls.Add(this.TbxPtoMaxX);
-            this.groupBox3.Controls.Add(this.TbxPtoMinY);
-            this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox3.Location = new System.Drawing.Point(12, 268);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 229);
-            this.groupBox3.TabIndex = 15;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pontos de Coordenadas Vértice";
-            this.toolTipInicio.SetToolTip(this.groupBox3, "Resultados calculados de sua Equação");
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label15.Location = new System.Drawing.Point(33, 197);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 15);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "(y):";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label14.Location = new System.Drawing.Point(33, 93);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 15);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "(y):";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label13.Location = new System.Drawing.Point(33, 150);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 15);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "(x):";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label12.Location = new System.Drawing.Point(33, 45);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 15);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "(x):";
             // 
             // groupBox5
             // 
@@ -723,6 +727,21 @@ namespace CalcEquacao
             this.timerInicio.Interval = 1000;
             this.timerInicio.Tick += new System.EventHandler(this.timerInicio_Tick);
             // 
+            // printDialog
+            // 
+            this.printDialog.UseEXDialog = true;
+            // 
+            // printPreviewDialog
+            // 
+            this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog.Document = this.PrintDocument;
+            this.printPreviewDialog.Enabled = true;
+            this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
+            this.printPreviewDialog.Name = "printPreviewDialog";
+            this.printPreviewDialog.Visible = false;
+            // 
             // FrmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,7 +749,7 @@ namespace CalcEquacao
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(488, 509);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnFormula);
+            this.Controls.Add(this.btnImprFormula);
             this.Controls.Add(this.panelAutExport);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox5);
@@ -810,7 +829,7 @@ namespace CalcEquacao
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TbxPtoMaxX;
         private System.Windows.Forms.Label lbinfCoordVertice;
-        private System.Windows.Forms.Button btnFormula;
+        private System.Windows.Forms.Button btnImprFormula;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -818,6 +837,9 @@ namespace CalcEquacao
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbStatusInf;
         private System.Windows.Forms.Label lbStatusEquac;
+        public System.Drawing.Printing.PrintDocument PrintDocument;
+        public System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
+        public System.Windows.Forms.PrintDialog printDialog;
     }
 }
 
